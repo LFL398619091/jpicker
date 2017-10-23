@@ -131,12 +131,10 @@
       .cancel, .confirm {
         font-size: 36px;
       }
-      picker-title {
-        font-size: 30px
-      }
     }
-  }
-  .picker-content {
+    .picker-title {
+      font-size: 30px
+    }
     .picker-content {
       .wheel-wrapper {
         .wheel {
@@ -155,12 +153,10 @@
       .cancel, .confirm {
         font-size: 62px;
       }
-      picker-title {
-        font-size: 58px
-      }
     }
-  }
-  .picker-content {
+    .picker-title {
+      font-size: 58px
+    }
     .picker-content {
       .wheel-wrapper {
         .wheel {
@@ -168,5 +164,24 @@
         }
       }
     }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5) {
+  .border-1px:after, .border-1px:before {
+    -webkit-transform: scaleY(.7);
+    -webkit-transform-origin: 0 0;
+    transform: scaleY(.7)
+  }
+
+  .border-1px:after {
+    -webkit-transform-origin: left bottom
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2) {
+  .border-1px:after, .border-1px:before {
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5)
   }
 }
