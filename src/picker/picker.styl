@@ -91,6 +91,19 @@
       width: 100%;
       content: " ";
     }
+    .mask-bottom {
+      bottom: 0;
+      background: -webkit-gradient(linear, left top, left bottom, from(hsla(0, 0%, 100%, .4)), to(hsla(0, 0%, 100%, .8)));
+      background: -o-linear-gradient(top, hsla(0, 0%, 100%, .4), hsla(0, 0%, 100%, .8))
+    }
+    .mask-bottom:after, .mask-bottom:before {
+      display: block;
+      position: absolute;
+      border-top: 1px solid #ccc;
+      left: 0;
+      width: 100%;
+      content: " "
+    }
   }
   .wheel-wrapper {
     display: -ms-flexbox;
