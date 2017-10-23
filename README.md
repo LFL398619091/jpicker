@@ -17,21 +17,21 @@
 
 ### 通过npm引入 ###
 
-安装better-picker
+安装mx-picker
 
 ```shell
-npm install better-picker --save-dev
+npm install mx-picker --save-dev
 ```
-引入better-picker
+引入mx-picker
 
 ```javascript
-import Picker from 'better-picker'
+import Picker from 'mx-picker'
 ```
 
 >如果不支持import, 请使用
 
 ```javascript
-var Picker = require('better-picker')
+var Picker = require('mx-picker')
 ```
 
 
@@ -42,7 +42,7 @@ html 部分：
 JS 部分：
 
     var nameEl = document.getElementById('name');
-    
+
     var data1 = [
     	{
     		text: '小美',
@@ -52,7 +52,7 @@ JS 部分：
     		value: 2
     	}
     ];
-    
+
     var data2 = [
     	{
     		text: '张三',
@@ -103,7 +103,7 @@ JS 部分：
     		value: 12
     	}
     ];
-    
+
     var data3 = [
     	{
     		text: '开心',
@@ -120,32 +120,32 @@ JS 部分：
     		value: 4
     	}
     ];
-    
+
     var picker = new Picker({
     	data: [data1, data2, data3],
     	selectedIndex: [0, 1, 2],
     	title: '我们都是小学生'
     });
-    
+
     picker.on('picker.select', function (selectedVal, selectedIndex) {
     	nameEl.innerText = data1[selectedIndex[0]].text + ' ' + data2[selectedIndex[1]].text + ' ' + data3[selectedIndex[2]].text;
     })
-    
+
     picker.on('picker.change', function (index, selectedIndex) {
     	console.log(index);
     	console.log(selectedIndex);
     });
-    
+
     picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
     	console.log(selectedVal);
     	console.log(selectedIndex);
     });
-    
+
     nameEl.addEventListener('click', function () {
     	picker.show();
     });
 
-   
+
 
 ### options
 options.title  (String)
@@ -203,12 +203,12 @@ picker的源码是基于webpack构建的
 
 首先，clone项目源码
 ```bash
-git clone https://github.com/ustbhuangyi/picker.git
+git clone https://github.com/LFL398619091/jpicker.git
 ```
 
 安装依赖
 ```bash
-cd picker
+cd mx-picker
 npm install
 ```
 测试demo页
