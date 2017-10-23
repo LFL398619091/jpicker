@@ -1,6 +1,6 @@
 {
   "name": "mx-picker",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "h5 picker inspired by ios UIPickerView",
   "main": "dist/picker.min.js",
   "scripts": {
