@@ -10,6 +10,9 @@ import {
 import pickerTemplate from './picker.handlebars';
 import itemTemplate from './item.handlebars';
 import './picker.styl';
+// 获取根节点字体大小
+const htmlFontSize = getComputedStyle(window.document.documentElement)['font-size'];
+const remRate = Math.round(parseInt(htmlFontSize.substring(0, (htmlFontSize.length - 2)))) + 'px';
 
 export default class Picker extends EventEmitter {
   constructor(options) {
@@ -38,6 +41,8 @@ export default class Picker extends EventEmitter {
 
     this.maskEl = this.pickerEl.getElementsByClassName('mask-hook')[0];
     this.wheelEl = this.pickerEl.getElementsByClassName('wheel-hook');
+    this.wheelItemEl = this.pickerEl.getElementsByClassName('wheel-item');
+    this.wheelItemEl.style.height = remRate;
     this.panelEl = this.pickerEl.getElementsByClassName('panel-hook')[0];
     this.confirmEl = this.pickerEl.getElementsByClassName('confirm-hook')[0];
     this.cancelEl = this.pickerEl.getElementsByClassName('cancel-hook')[0];
