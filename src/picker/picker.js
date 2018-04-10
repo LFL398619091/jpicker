@@ -41,8 +41,12 @@ export default class Picker extends EventEmitter {
 
     this.maskEl = this.pickerEl.getElementsByClassName('mask-hook')[0];
     this.wheelEl = this.pickerEl.getElementsByClassName('wheel-hook');
-    this.wheelItemEl = this.pickerEl.getElementsByClassName('wheel-item')[0];
-    this.wheelItemEl.style.height = remRate;
+    this.wheelItemEls = this.pickerEl.getElementsByClassName('wheel-item');
+    // 批量修复
+    for (var i = 0; i < this.wheelItemEls.length; i++) {
+      var wheelItem = this.wheelItemEls[i];
+      wheelItem.style.height = remRate;
+    }
     this.panelEl = this.pickerEl.getElementsByClassName('panel-hook')[0];
     this.confirmEl = this.pickerEl.getElementsByClassName('confirm-hook')[0];
     this.cancelEl = this.pickerEl.getElementsByClassName('cancel-hook')[0];
