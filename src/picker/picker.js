@@ -11,7 +11,7 @@ import pickerTemplate from './picker.handlebars';
 import itemTemplate from './item.handlebars';
 import './picker.styl';
 // 获取根节点字体大小
-const htmlFontSize = getComputedStyle(window.document.documentElement)['font-size'];
+const htmlFontSize = window.getComputedStyle(window.document.documentElement)['font-size'];
 const remRate = Math.round(parseInt(htmlFontSize.substring(0, (htmlFontSize.length - 2)))) + 'px';
 
 export default class Picker extends EventEmitter {
